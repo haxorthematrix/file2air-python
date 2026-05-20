@@ -1,0 +1,17 @@
+2026-05-20  1.1-py  Initial Python/scapy port of file2air v1.1.
+                    - Replaces LORCON with scapy + RadioTap injection.
+                    - All CLI options from the C version retained.
+                    - Channel switching via `iw`.
+                    - Fixes the -a (WDS) variable mix-up from the C source.
+
+Historical (from original file2air, for reference):
+Oct  8 2007  1.1    Added LORCON supported drivers to usage(), released 1.1
+Feb 23 2007  1.0RC4 Minor change, fixed -t to be 10/pps not 100/pps.
+Feb  8 2007  1.0RC3 Added support for incrementing sequence numbers, and
+                    the ability to specify WDS addresses.
+Aug 14 2006  1.0RC2 Added logic to not change mode or channel unless necessary
+Mar  6 2005  1.0RC1 Updated to use lorcon for packet injection.
+Feb 16 2005  0.4    Bug fixes, using wlan-ng properly now.  Updated KoreK patch
+                    for wlan-ng 0.2.1-pre26 drivers, working on 2.6.10 kernel.
+Feb  5 2005  0.3    Modified to use wlan-ng drivers for packet injection.
+Sep 20 2003  0.1    Initial release.
