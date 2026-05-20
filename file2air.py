@@ -22,6 +22,7 @@ import time
 
 try:
     from scapy.all import RadioTap, sendp, conf
+    from scapy.error import Scapy_Exception
     from scapy.packet import Raw
 except ImportError:
     sys.stderr.write(
@@ -380,7 +381,7 @@ def main(argv=None):
             "or grant CAP_NET_RAW.\n"
         )
         return 1
-    except OSError as e:
+    except (OSError, Scapy_Exception) as e:
         sys.stderr.write(f"\nerror: transmit failed: {e}\n")
         return 1
 
